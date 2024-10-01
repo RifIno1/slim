@@ -16,7 +16,7 @@ $twigMiddleware = TwigMiddleware::create($app, $twig);
 $app->add($twigMiddleware);
 
 // Define Route for Home
-$app->get('/', function ($request, $response, $args) use ($twig) {
+$app->get('/public', function ($request, $response, $args) use ($twig) {
     // Render Twig template
     return $twig->render($response, 'home.twig', [
         'title' => 'Home Page',
