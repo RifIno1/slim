@@ -16,6 +16,7 @@ $twigMiddleware = TwigMiddleware::create($app, $twig);
 $app->add($twigMiddleware);
 
 // Define Route for Home
+// link after public/ is the route
 $app->get('/public', function ($request, $response, $args) use ($twig) {
     // Render Twig template
     return $twig->render($response, 'home.twig', [
